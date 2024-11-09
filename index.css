@@ -19,8 +19,8 @@ nav {
 
 nav h3,
 nav li a {
-  color: white; /* Initial text color */
-  margin: 0; /* Reset default margin */
+  color: white;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -31,7 +31,7 @@ nav li {
 nav div {
   display: flex;
   margin-top: 5px;
-  gap: 15px; /* Space between list items */
+  gap: 15px;
 }
 
 nav ul {
@@ -71,6 +71,10 @@ header {
   align-items: center;
   color: white;
   text-align: center;
+}
+
+#burger {
+  display: none;
 }
 
 .jumbotron-content {
@@ -135,11 +139,16 @@ button {
     font-weight: 600;
 }
 
-article {
+article, section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 80px;
+}
+
+section {
+  padding: 20px
 }
 
 .about {
@@ -147,6 +156,10 @@ article {
   width: 80%;
   align-items: center;
   justify-content: center;
+}
+
+article h1, section h1 {
+  color: #006ec1;
 }
 
 .about-header {
@@ -258,4 +271,72 @@ article {
   padding-left: 20px;
   margin: 0;
   color: #FFF;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #006ec1;
+  padding-top: 10px;
+  margin-top: 50px;
+}
+
+.footer-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.footer-body h1 span {
+  color: #003760 ;
+}
+
+.social {
+  padding-left: 50px;
+}
+
+.social h3, .social p {
+  margin:0;
+}
+
+.social p {
+  font-size: 12px;
+}
+
+.cc {
+  background-color: #004983;
+  color: #FFF;
+  text-align: center;
+  font-size: 12px;
+}
+
+.social-image svg{
+  margin-top: 10px;
+  color: #FFF;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  #burger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+
+  nav h3 {
+    margin-top: 3px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  nav ul {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

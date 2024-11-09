@@ -8,8 +8,12 @@ window.addEventListener('scroll', function () {
     nav.style.color = 'black'; /* Text color when scrolling */
     nav.querySelectorAll('h3, li, a').forEach((element) => {
       element.style.color = '#006ec1'; /* Text color for each element when scrolling */
-
     });
+    // Change the stroke color of the SVG path
+    const svgPath = nav.querySelector("svg path");
+    if (svgPath) {
+      svgPath.style.stroke = '#006ec1';
+    }
   } else {
     nav.style.background = 'transparent'; /* Background color at the top */
     nav.style.border = 'none'; /* Remove border at the top */
@@ -18,5 +22,10 @@ window.addEventListener('scroll', function () {
     nav.querySelectorAll('h3, li, a').forEach((element) => {
       element.style.color = 'white'; /* Text color for each element at the top */
     });
+    // Change the stroke color of the SVG path
+    const svgPath = nav.querySelector("svg path");
+    if (svgPath) {
+      svgPath.style.stroke = '#FFFFFF';
+    }
   }
 });
